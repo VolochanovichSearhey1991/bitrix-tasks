@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 <?$ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
-	"",
+	"custom_template_for_detaile",
 	Array(
 		"DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
 		"DISPLAY_NAME" => $arParams["DISPLAY_NAME"],
@@ -47,6 +47,7 @@ $this->setFrameMode(true);
 		"GROUP_PERMISSIONS" => $arParams["GROUP_PERMISSIONS"],
 		"DISPLAY_TOP_PAGER" => $arParams["DETAIL_DISPLAY_TOP_PAGER"],
 		"DISPLAY_BOTTOM_PAGER" => $arParams["DETAIL_DISPLAY_BOTTOM_PAGER"],
+		"ID_FOR_REL_CANONICAL" => $arParams["ID_FOR_REL_CANONICAL"],
 		"PAGER_TITLE" => $arParams["DETAIL_PAGER_TITLE"],
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => $arParams["DETAIL_PAGER_TEMPLATE"],

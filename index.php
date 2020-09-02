@@ -85,6 +85,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
 		"COMPONENT_TEMPLATE" => "complex_news_custom",
+		"ID_FOR_REL_CANONICAL" => "13",
 		"VARIABLE_ALIASES" => array(
 			"SECTION_ID" => "SECTION_ID",
 			"ELEMENT_ID" => "ELEMENT_ID",

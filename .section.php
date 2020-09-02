@@ -1,9 +1,9 @@
 <?
 $sSectionName = "Главная страница";
-$arDirProperties = array(
+$arDirProperties = Array(
    "description" => "Мы предлагаем широкий ассортимент качественной одежды по адекватным ценам.",
    "keywords" => "женская одежда, мужская одежда, спортивная одежда, тапочки",
-   "robots" => "index, follow",
-   "content" => "100"
+   "ROBOTS" => "index, follow",
+   "CONTENT" => "100"
 );
 ?>

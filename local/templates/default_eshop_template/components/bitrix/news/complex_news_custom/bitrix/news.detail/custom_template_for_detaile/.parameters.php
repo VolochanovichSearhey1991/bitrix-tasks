@@ -7,6 +7,11 @@ $arTemplateParameters = array(
 		"TYPE" => "CHECKBOX",
 		"DEFAULT" => "Y",
 	),
+	"DISPLAY_NAME" => Array(
+		"NAME" => GetMessage("T_IBLOCK_DESC_NEWS_NAME"),
+		"TYPE" => "CHECKBOX",
+		"DEFAULT" => "Y",
+	),
 	"DISPLAY_PICTURE" => Array(
 		"NAME" => GetMessage("T_IBLOCK_DESC_NEWS_PICTURE"),
 		"TYPE" => "CHECKBOX",
@@ -24,19 +29,9 @@ $arTemplateParameters = array(
 		"VALUE" => "Y",
 		"DEFAULT" =>"N",
 		"REFRESH"=> "Y",
-	),
-	"DISPLAY_SPECIALDATE_FIELD" => Array(
-		"NAME" => GetMessage("T_IBLOCK_DESC_SPECIALDATE"),
-		"TYPE" => "CHECKBOX",
-		"MULTIPLE" => "N",
-		"DEFAULT" =>"N",
-	),
-	"ID_FOR_REL_CANONICAL" => Array(
-		"NAME" => GetMessage("T_IBLOCK_DESC_REL_CANONICAL"),
-		"TYPE" => "STRING",
-		"DEFAULT" =>"",
-	));
-	
+	),	
+);
+
 if ($arCurrentValues["USE_SHARE"] == "Y")
 {
 	$arTemplateParameters["SHARE_HIDE"] = array(
