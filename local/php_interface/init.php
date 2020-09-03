@@ -1,25 +1,13 @@
 <?
-	AddEventHandler("iblock", "OnBeforeIBlockElementUpdate", "OnBeforeIBlockElementUpdateHandler");
+	AddEventHandler("iblock", "OnBeforeIBlockElementUpdate", "brakeDeactivateElem");
 
-	function OnBeforeIBlockElementUpdateHandler(&$arFields) {
+	function brakeDeactivateElem(&$arFields) {
 		global $APPLICATION;
-		echo "<script>alert('TEST');</script>";
-
-		if ($arFields["ACTIVE"] === "N") {
-			//echo "<pre>"; print_r($arFields); echo "</pre>";
-
-
-
-
-
-			CIBlockElement::CounterInc("413");
-			$res = CIBlockElement::GetByID("413");
-			echo "<pre>"; print_r($res->GetNext()); echo "</pre>";
-
-
-
-
-			$APPLICATION->throwException("Товар невозможно деактивировать, у него [count] просмотров");
+		$res = CIBlockElement::GetByID($arFields["ID"]);
+		$thisElementShowCount = $res->Fetch()["SHOW_COUNTER"];
+		
+		if ( ($arFields["ACTIVE"] === "N") && ($thisElementShowCount > 2) ) {
+			$APPLICATION->throwException("Товар невозможно деактивировать, у него " .  $thisElementShowCount . " просмотров");
     	return false;
 		}
     
