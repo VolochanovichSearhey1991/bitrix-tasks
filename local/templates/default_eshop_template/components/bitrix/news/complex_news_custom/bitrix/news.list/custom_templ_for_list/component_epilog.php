@@ -3,9 +3,9 @@
 global $APPLICATION;
 
    if ($arParams["DISPLAY_SPECIALDATE_FIELD"] === "Y") {
-		$iblock_id = $arResult["ELEMENTS"][0];
-		$specialdate = getNewsDate($iblock_id);
+		$specialdate = $arResult['FIRST_NEWS_DATE'];
 		$APPLICATION->SetPageProperty("content", $specialdate);
+
 	}
 	
 ?>
