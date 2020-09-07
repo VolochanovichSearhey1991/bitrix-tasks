@@ -1,8 +1,8 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"добавить новость", 
-		"/dobavlenie-elementa-infobloka/", 
+		"продукты", 
+		"http://980trainee.dev-bitrix.by/products/", 
 		Array(), 
 		Array(), 
 		"" 
